@@ -1,0 +1,21 @@
+.donation-info-wrapper{
+    border-top: 1px solid rgba(0,0,0,0.05);
+    padding-top: 30px;
+}
+.donation-info{
+
+}
+.donation-info-label{
+    color: #adb5bd;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: .8rem;
+    margin-bottom: 4px;
+}
+.donation-info-value{
+     font-size: 1rem;
+}
+
+.donation-right-heading{
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
