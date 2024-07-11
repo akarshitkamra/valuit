@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Admin Dashboard | Valuit</title>
+    <meta charset="utf-8">
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <meta content="Admin dashboard | Valuit" name="description">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link href="/admin-assets/img/favicon.png" rel="shortcut icon">
+    <link href="apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
+    <link href="/admin-assets/bower_components/select2/dist/css/select2.min.css" rel="stylesheet">
+    <link href="/admin-assets/bower_components/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+    <link href="/admin-assets/bower_components/dropzone/dist/dropzone.css" rel="stylesheet">
+    <link href="/admin-assets/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css" rel="stylesheet">
+    <link href="/admin-assets/bower_components/fullcalendar/dist/fullcalendar.min.css" rel="stylesheet">
+    <link href="/admin-assets/bower_components/perfect-scrollbar/css/perfect-scrollbar.min.css" rel="stylesheet">
+    <link href="/admin-assets/bower_components/slick-carousel/slick/slick.css" rel="stylesheet">
+    <link href="/admin-assets/bower_components/dropify/dropify.css" rel="stylesheet">
+    <link href="/admin-assets/bower_components/summernote/summernote.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.6.4/css/buttons.dataTables.min.css">
+    <link href="/admin-assets/css/main.css?version=4.5.0" rel="stylesheet">
+    <link href="/admin-assets/css/custom.css" rel="stylesheet">
+    <link href="/admin-assets/icon_fonts_admin-assets/feather/style.css" rel="stylesheet">
+  </head>
+  <body class="menu-position-side menu-side-left full-screen with-content-panel">
+    <div class="all-wrapper with-side-panel solid-bg-all">  
+      <div class="layout-w">
+        <!--------------------
+        START - Mobile Menu
+        -------------------->
+        <div class="menu-mobile menu-activated-on-click color-scheme-dark">
+          <div class="mm-logo-buttons-w">
+            <a class="mm-logo" href="/"><img src="https://valuit.io/assets/images/home/header-logo.svg"></a>
+            <div class="mm-buttons">
+              <div class="mobile-menu-trigger">
+                <div class="os-icon os-icon-hamburger-menu-1"></div>
+              </div>
+            </div>
+          </div>
+          <div class="menu-and-user">
+            <div class="logged-user-w">
+              <div class="avatar-w">
+                <img alt="" src="/admin-assets/img/avatar1.jpg">
+              </div>
+              <div class="logged-user-info-w">
+                <div class="logged-user-name">
+                <%= currentUser.name %>
+                </div>
+                <div class="logged-user-role">
+                  Administrator
+                </div>
+              </div>
+            </div>
+            <!--------------------
+            START - Mobile Menu List
+            -------------------->
+            <ul class="main-menu">
+              <li class="selected">
+                <a href="/userlistpanel">
+                  <div class="icon-w">
+                    <div class="os-icon os-icon-user"></div>
+                  </div>
+                  <span>Users</span>
+              </a>
+              </li>
+
+             
+            </ul>
+            <!--------------------
+            END - Mobile Menu List
+            -------------------->
+          </div>
+        </div>
+        <!--------------------
+        END - Mobile Menu
+        --------------------><!--------------------
+        START - Main Menu
+        -------------------->
+        <div class="menu-w color-scheme-light color-style-transparent menu-position-side menu-side-left menu-layout-compact sub-menu-style-over sub-menu-color-bright selected-menu-color-light menu-activated-on-hover menu-has-selected-link">
+          <div class="logo-w">
+            <a class="logo d-flex" href="/userlistpanel">
+              <img src="https://valuit.io/assets/images/home/header-logo.svg">
+            </a>
+          </div>
+          <div class="logged-user-w avatar-inline">
+            <div class="logged-user-i">
+              <div class="avatar-w">
+                <img alt="" src="/admin-assets/img/admin.png">
+              </div>
+              <div class="logged-user-info-w">
+                <div class="logged-user-name">
+                  <%= currentUser.name %>
+                </div>
+                <div class="logged-user-role">
+                  Administrator
+                </div>
+              </div>
+              <div class="logged-user-toggler-arrow">
+                <div class="os-icon os-icon-chevron-down"></div>
+              </div>
+              <div class="logged-user-menu color-style-bright">
+                <div class="logged-user-avatar-info">
+                  <div class="avatar-w">
+                    <img alt="" src="/admin-assets/img/admin.png">
+                  </div>
+                  <div class="logged-user-info-w">
+                    <div class="logged-user-name">
+                      <%= currentUser.name %>
+                    </div>
+                    <div class="logged-user-role">
+                      Administrator
+                    </div>
+                  </div>
+                </div>
+                <div class="bg-icon">
+                  <i class="os-icon os-icon-wallet-loaded"></i>
+                </div>
+                <ul>
+                  <li>
+                    <a href="/userlistpanel/logout"><i class="os-icon os-icon-signs-11"></i><span>Logout</span></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <h1 class="menu-page-header">
+            Page Header
+          </h1>
+          <ul class="main-menu">
+            <li class="sub-header">
+              <span>Users</span>
+            </li>
+            <li class="selected">
+              <a href="/userlistpanel">
+                <div class="icon-w">
+                  <div class="os-icon os-icon-user"></div>
+                </div>
+                <span>Users</span>
+            </a>
+            </li>
+           
+          </ul>
+        </div>
+        <!--------------------
+        END - Main Menu
+        -------------------->
+        <div class="content-w">
+            <div class="top-bar color-scheme-transparent">
+                <!--------------------
+                START - Top Menu Controls
+                -------------------->
+                <div class="top-menu-controls">
+                  <!--------------------
+                  END - Settings Link in secondary top menu
+                  --------------------><!--------------------
+                  START - User avatar and menu in secondary top menu
+                  -------------------->
+                  <!--------------------
+                  END - User avatar and menu in secondary top menu
+                  -------------------->
+                </div>
+                <!--------------------
+                END - Top Menu Controls
+                -------------------->
+              </div>
+              <% if (error && error.length) { %>
+                <div class="text-center alert alert-danger alert-dismissible fade show mb-0" role="alert">
+                    <%= error %>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+            <% } %>
+            <% if (success && success.length) { %>
+                <div class="text-center alert alert-success alert-dismissible fade show mb-0" role="alert">
+                    <%= success %>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+            <% } %>
